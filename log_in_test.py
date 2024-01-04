@@ -14,6 +14,9 @@ def run(playwright: Playwright) -> None:
     page.get_by_placeholder("Enter password").click()
     page.get_by_placeholder("Enter password").fill("testtesttest123!")
     page.get_by_role("button", name="Login").click()
+    expect(page.get_by_role("link", name="Logout")).to_be_visible()
+    expect(page.get_by_text("rubellemari@gmail.com")).to_be_visible()
+    expect(page.get_by_role("heading", name="Orders", exact=True)).to_be_visible()
     print('Login test PASSED')
     # ---------------------
     context.close()
