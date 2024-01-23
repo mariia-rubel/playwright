@@ -1,0 +1,46 @@
+Here is a list of some useful CLI commands for testing:
+
+Stop at first failure:
+    pytest -x
+
+Allow max failures before stopping:
+    pytest --maxfail=2
+
+Run a single test:
+    pytest -k test_func_name
+
+Run a single file:
+    pytest test_file.py
+
+Re-run last failed tests only:
+    pytest --lf
+
+Run tests in headed mode (default: headless):
+    --headed
+
+Run tests in a different browser (chromium, firefox or webkit). It can be specified multiple times(default: all browsers).
+    --browser
+
+Browser channel to be used:
+    --browser--channel
+
+Run tests with slow mo:
+    --slowmo
+
+Device to be emulated:
+    --device
+
+Whether to record a video for each test, on, off or only-on-failure (default: off):
+    --video
+
+Whether to automatically capture a screenshot after each test, on, off or only-on-failure (default: off):
+    --screenshot
+
+Specify a base URL:
+    --base-url
+
+Reporting with pytest-reporter-html1:
+    pytest --template=html1/index.html --report=report.html
+
+Parallel execution:
+    pytest -n auto
