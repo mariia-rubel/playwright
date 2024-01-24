@@ -1,1 +1,1 @@
-Here you can find some basic Playwright Python test scripts I wrote for the website of my favourite British artist https://www.lucypittaway.co.uk/.
+Here you can find illustrative basic Playwright Python test scripts I created. 
