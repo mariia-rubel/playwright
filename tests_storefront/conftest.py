@@ -1,7 +1,9 @@
 import pytest
 import playwright
 from playwright.sync_api import Playwright
+import os
 
+PASSWORD = os.environ["PASSWORD"]
 
 @pytest.fixture()
 def set_up (page):

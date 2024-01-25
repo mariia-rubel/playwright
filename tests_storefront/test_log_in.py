@@ -1,3 +1,5 @@
+import os
+
 from playwright.sync_api import Playwright, sync_playwright, expect
 import pytest
 
@@ -7,8 +9,7 @@ import pytest
 @pytest.mark.parametrize("email", ["rubellemari@gmail.com",
                                              pytest.param("rubellemari@gmail", marks=pytest.mark.xfail),
                                              pytest.param("fakeemail", marks=pytest.mark.xfail)])
-@pytest.mark.parametrize("password", ["testtesttest123!",
-                                              "testtesttest123!",
+@pytest.mark.parametrize("password", [os.environ ["PASSWORD"],
                                              pytest.param("fakepassword", marks=pytest.mark.xfail)])
 
 def test_log_in(set_up, email, password) -> None:
